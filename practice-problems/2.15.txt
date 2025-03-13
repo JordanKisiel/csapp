@@ -1,0 +1,16 @@
+x == y
+
+equivalent is just the negation of XOR
+
+!(x ^ y)
+
+x | y | x == y
+----------------
+0 | 0 | 1
+0 | 1 | 0
+1 | 0 | 0
+1 | 1 | 1
+
+DNF
+(!x && !y) || (x && y)
+

@@ -1,0 +1,14 @@
+A.
+    Black => White
+    Blue => Yellow
+    Green => Magenta
+    Cyan => Red
+    Red => Cyan
+    Magenta => Green
+    Yellow => Blue
+    White => Black
+
+B.
+    Blue | Green = 011 (Cyan)
+    Yellow & Cyan = 010 (Green)
+    Red ^ Magenta = 001 (Blue)

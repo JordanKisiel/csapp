@@ -1,0 +1,36 @@
+Step | *x | *y
+Init | a  | b
+1    | a  | nothing?
+2    | b  | nothing?
+3    | b  | a
+
+
+*x = 0xBE
+*y = 0x7D
+
+1011 1110
+0111 1101
+-------------
+*y = 1100 0011 (0xC3) after step 1
+
+1011 1110
+1100 0011
+------------
+*x = 0111 1101 (0x7D) after step 2
+
+0111 1101
+1100 0011
+------------
+*y = 1011 1110 (0xBE) after step 3
+
+the example shows that it works but it's probably
+better to show it algebraically
+
+*x = *x ^ (*x ^ *y)
+because in step 2 we're XOR-ing
+*x with itself, it cancels out meaning that
+*x now points to the address that pointed after
+
+*y = *y ^ (*x ^ *y)
+
+which resolves in step 3 now that *x is now *y
